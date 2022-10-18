@@ -15,9 +15,10 @@ public class CalculatorController {
     public String calculate(@RequestParam(name = "paramater1") int paramater1,@RequestParam(name = "paramater2") int paramater2, @RequestParam(name = "operator") String operator, Model model){
         int result;
         switch (operator){
-            case "add" :
+            case "add" :result = paramater1 + paramater2;
+                break;
             case "multi" :
-                result = paramater1 + paramater2;
+                result = paramater1 * paramater2;
                 break;
             case "sub" :
                 result = paramater1 - paramater2;
